@@ -1,79 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Charis' Playground</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      scroll-behavior: smooth;
-    }
-    .section {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #ffffff;
-      font-size: 30px;
-      background-size: cover;
-      background-position: center; 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    /* Add more sections as needed */
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Charis' Playground</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 30px;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
-	
-  <div class="network">
-  <div class="attractor"></div>
-  <script src="index.js"></script>
-  <font face="Droid Sans" size="20px" color="#FF7A59">
-	<header>
-        <h1>Welcome to My Portfolio</h1>
-    </header>
-	<div class="section" id="section1" style="background-image: url('https://synergeticplaytherapy.com/wp-content/uploads/2018/11/Brain-background.jpg');">
-      <section>
-        <h2>My Interests</h2>
-	  <div>    
-        <h1>Τεχνητή Νοημοσύνη</h1>
-        <p>
-          <ul>
-            <li>Computer Vision, 3D Vision, NeRFs</li>
-            <li>Generative Models, TTI, Stable Diffusion</li>
-            <li>Reinforcment Learning, Robotics</li>
-          </ul>
-        </p>
-      </div>
+    <div class="sidebar">
+        <a href="#section1">About Me</a>
+        <a href="#section2">Projects</a>
+        <a href="#section3">Contact Info</a>
+    </div>
+    <div class="section" id="section1" style="background-image: url('https://synergeticplaytherapy.com/wp-content/uploads/2018/11/Brain-background.jpg');">
+        <div>
+            <h1>Charis Filis </h1>
+            <p>
+                <>
+                </ul
+            </p>
+        </div>
     </div>
     <div class="section" id="section2" style="background-image: url('https://www.move-x.it/wp-content/uploads/2023/06/AdobeStock_601492882-scaled.jpeg');">
-      <div>
-        <h1>Συστήματα Υπολογιστών</h1>
-        <p>
-          <ul>
-            <li>Ενσωματωμένα Συστήματα Πραγματικού Χρόνου</li>
-            <li>Παράλληλα και Διανεμμημένα Συστήματα Υψηλής Υπολογιστικής Απόδοσης</li>
-            <li>Λειτουργικά Συστήματα</li>
-          </ul>
-        </p>
-		
-		
-      </div>
-	  <section>
-        <h2>Projects</h2>
-        <p>Showcase your projects here.</p>
-		</section>
+        <div>
+            <h1>Συστήματα Υπολογιστών</h1>
+            <p>
+                <ul>
+                    <li>Ενσωματωμένα Συστήματα Πραγματικού Χρόνου</li>
+                    <li>Παράλληλα και Διανεμημένα Συστήματα Υψηλής Υπολογιστικής Απόδοσης</li>
+                    <li>Λειτουργικά Συστήματα</li>
+                </ul>
+            </p>
+        </div>
     </div>
-  </div>
-  </font>
+    <div class="section" id="section3" style="background-color: #444;">
+        <div>
+            <h1>Contact Info</h1>
+            <p>Email: example@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+    </div>
 </body>
-
 </html>
