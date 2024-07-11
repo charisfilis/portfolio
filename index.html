@@ -1,21 +1,79 @@
-<!DOCTYPE>
-<html>
-  <head>
-    <meta name="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale='1.0'>
-    <<title>Charis' 3D Playground</title>
-  </head>
-  <body>
-    <header>
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charis' Playground</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+    .section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-size: 30px;
+      background-size: cover;
+      background-position: center; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* Add more sections as needed */
+  </style>
+</head>
+
+<body>
+	
+  <div class="network">
+  <div class="attractor"></div>
+  <script src="index.js"></script>
+  <font face="Droid Sans" size="20px" color="#FF7A59">
+	<header>
         <h1>Welcome to My Portfolio</h1>
     </header>
-    <section>
-        <h2>About Me</h2>
-        <p>Introduce yourself here.</p>
-    </section>
-    <section>
+	<div class="section" id="section1" style="background-image: url('https://synergeticplaytherapy.com/wp-content/uploads/2018/11/Brain-background.jpg');">
+      <section>
+        <h2>My Interests</h2>
+	  <div>    
+        <h1>Τεχνητή Νοημοσύνη</h1>
+        <p>
+          <ul>
+            <li>Computer Vision, 3D Vision, NeRFs</li>
+            <li>Generative Models, TTI, Stable Diffusion</li>
+            <li>Reinforcment Learning, Robotics</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="section" id="section2" style="background-image: url('https://www.move-x.it/wp-content/uploads/2023/06/AdobeStock_601492882-scaled.jpeg');">
+      <div>
+        <h1>Συστήματα Υπολογιστών</h1>
+        <p>
+          <ul>
+            <li>Ενσωματωμένα Συστήματα Πραγματικού Χρόνου</li>
+            <li>Παράλληλα και Διανεμμημένα Συστήματα Υψηλής Υπολογιστικής Απόδοσης</li>
+            <li>Λειτουργικά Συστήματα</li>
+          </ul>
+        </p>
+		
+		
+      </div>
+	  <section>
         <h2>Projects</h2>
         <p>Showcase your projects here.</p>
-    </section>
-  </body>
+		</section>
+    </div>
+  </div>
+  </font>
+</body>
+
 </html>
