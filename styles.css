@@ -24,7 +24,12 @@ body, html {
   background-color: #fadffd; /* Change color for connected nodes */
 }
 
-
+.pfp{
+  width: 300px; /* Adjust the size as needed */
+  height: 300px; /* Adjust the size as needed */
+  border-radius: 90%; /* Makes the corners round */
+  object-fit: cover; 
+  }
 
 .attractor {
   position: absolute;
@@ -49,3 +54,4 @@ body, html {
     opacity: 0;
   }
 }
+
