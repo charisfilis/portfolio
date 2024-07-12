@@ -8,7 +8,7 @@
     <style>
         body, html {
             font-family: 'Helvetica', 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            background-color: #001f3f; /* Navy background */
             margin: 0;
             padding: 0;
             width: 100%;
@@ -16,16 +16,23 @@
             overflow-x: hidden;
             scroll-behavior: smooth; /* Enable smooth scrolling */
         }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
         .section {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: #ffffff;
-            font-size: 30px;
-            background-size: cover;
-            background-position: center;
-            text-align: center;
+            color: #333;
+            font-size: 20px;
+            padding: 20px;
         }
         .sidebar {
             position: fixed;
@@ -49,53 +56,40 @@
         }
         .sidebar a:hover {
             text-decoration: underline;
-        } 
+        }
         .pfp {
             border-radius: 50%;
             width: 150px;
             height: 150px;
         }
-        .network {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        .node {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: blue;
-            border-radius: 50%;
-        }
-        .connection {
-            position: absolute;
-            background-color: rgba(0, 0, 255, 0.2);
-            transform-origin: top left;
-        }
-        .attractor {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(0, 0, 255, 0.1);
-            pointer-events: none;
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .sidebar a {
+                font-size: 18px;
+                margin: 5px;
+            }
+            .section {
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <canvas class="background-canvas"></canvas>
-    
     <div class="sidebar">
         <a href="#section1">About Me</a>
-        <a href="#section2">Projects</a>
-        <a href="#section3">Contact Info</a>
+        <a href="#section2">Interests</a>
+        <a href="#section3">Projects</a>
+        <a href="#section4">Contact Info</a>
     </div>
     
     <div class="section" id="section1" style="background-image: url('https://synergeticplaytherapy.com/wp-content/uploads/2018/11/Brain-background.jpg');">
-        <div>
+        <div class="container">
             <h1>Charis Filis</h1>
             <img src="./assets/pfp.jpg" alt="Profile Picture" class="pfp">
             <p>Welcome to my Webpage</p>
@@ -103,7 +97,7 @@
     </div>
     
     <div class="section" id="section2" style="background-image: url('https://www.move-x.it/wp-content/uploads/2023/06/AdobeStock_601492882-scaled.jpeg');">
-        <div>
+        <div class="container">
             <h1>Interests</h1>
             <ul>
                 <li>3D Vision and Multimedia</li>
@@ -117,25 +111,24 @@
     </div>
     
     <div class="section" id="section3" style="background-color: #444;">
-        <div>
+        <div class="container">
             <h1>Projects</h1>
             <p>HashModNFFBanks on NEUS</p>
-            <img src="" alt="thesis">
+            <img src="https://github.com/ArtoriasAbyssslayer/HashModNFFBanks-IDR/blob/master/media/architectures/3DHashgridEmbeddingNetArchitecture.png" alt="thesis">
             <p>Other Projects</p>
-            <img src="https://banner2.cleanpng.com/20180711/iqy/kisspng-github-computer-icons-github-logo-5b459a3d238b60.4061479515312881251456.jpg" alt="repos">
+            <img src="https://www.vhv.rs/dpng/d/33-335636_github-hd-png-download.png" alt="repos">
         </div>
     </div>
     
     <div class="section" id="section4" style="background-color: #444;">
-        <div>
+        <div class="container">
             <h1>Contact Info</h1>
             <p>Email: harry.filis@protonmail.com</p>
             <p>Phone: (+30) 6972434854</p>
             <p>Address: Mpizaniou 50 Thessaloniki</p>
         </div>
     </div>
-    
-    <script src="index.js"></script>
+
+    <script src="./index.js"></script>
 </body>
 </html>
-
