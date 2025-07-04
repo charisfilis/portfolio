@@ -1,11 +1,5 @@
 /* Reset & base styles */
-.profile-photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
 
 * {
@@ -13,7 +7,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
 body {
   font-family: 'Inter', sans-serif;
   background: #fdfdfd;
