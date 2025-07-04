@@ -1,138 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charis' Playground</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body, html {
-            font-family: 'Helvetica', 'Arial', sans-serif;
-            background-color: #001f3f; /* Navy background */
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow-x: hidden;
-            scroll-behavior: smooth; /* Enable smooth scrolling */
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        .section {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #333;
-            font-size: 20px;
-            padding: 20px;
-        }
-        .sidebar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 200px;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        .sidebar a {
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            margin: 10px;
-        }
-        .sidebar a:hover {
-            text-decoration: underline;
-        }
-        .pfp {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                flex-direction: row;
-                justify-content: space-around;
-            }
-            .sidebar a {
-                font-size: 18px;
-                margin: 5px;
-            }
-            .section {
-                padding: 10px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charis Filis – Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="sidebar">
-        <a href="#section1">About Me</a>
-        <a href="#section2">Interests</a>
-        <a href="#section3">Projects</a>
-        <a href="#section4">Contact Info</a>
+  <header class="hero">
+    <div class="container">
+      <h1>Charis Filis</h1>
+      <img src="assets/pfp.jpg" alt="Photo of Charis Filis" class="profile-photo" />
+      <p class="subtitle">Electrical & Computer Engineer</p>
+      <nav class="social-links">
+        <a href="https://github.com/ArtoriasAbyssslayer" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/harry-filis" target="_blank">LinkedIn</a>
+        <a href="mailto:harry.filis@protonmail.com">Email</a>
+      </nav>
     </div>
-    
-    <div class="section" id="section1" style="background-image: url('https://synergeticplaytherapy.com/wp-content/uploads/2018/11/Brain-background.jpg');">
-        <div class="container">
-            <h1>Charis Filis</h1>
-            <img src="./assets/pfp.jpg" alt="Profile Picture" class="pfp">
-            <p>Welcome to my Webpage</p>
-        </div>
-    </div>
-    
-    <div class="section" id="section2" style="background-image: url('https://www.move-x.it/wp-content/uploads/2023/06/AdobeStock_601492882-scaled.jpeg');">
-        <div class="container">
-            <h1>Interests</h1>
-            <ul>
-                <li>3D Vision and Multimedia</li>
-                <li>Robotics</li>
-                <li>Computer Systems</li>
-                <li>Real Time Embedded Systems</li>
-                <li>Parallel Computing - HPC</li>
-                <li>Operating Systems</li>
-            </ul>
-        </div>
-    </div>
-    
-    <div class="section" id="section3" style="background-color: #444;">
-        <div class="container">
-            <h1>Projects</h1>
-            <p>HashModNFFBanks on NEUS</p>
-            <a href="https://github.com/ArtoriasAbyssslayer/HashModNFFBanks-IDR">
-			<img src="https://github.com/ArtoriasAbyssslayer/HashModNFFBanks-IDR/blob/master/media/architectures/3DHashgridEmbeddingNetArchitecture.png" alt="thesis">
-			</a>
-            <p>Other Projects</p>
-            <a  href=https://github.com/ArtoriasAbyssslayer>
-			<img src="https://www.vhv.rs/dpng/d/33-335636_github-hd-png-download.png" alt="repos",width="150", height="70">
-			</a>
-        </div>
-    </div>
-    
-    <div class="section" id="section4" style="background-color: #444;">
-        <div class="container">
-            <h1>Contact Info</h1>
-            <p>Email: harry.filis@protonmail.com</p>
-            <p>Phone: (+30) 6972434854</p>
-            <p>Address: Mpizaniou 50 Thessaloniki</p>
-        </div>
-    </div>
+  </header>
 
-    <script src="./index.js"></script>
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Graduate of the Polytechnic School of Aristotle University of Thessaloniki with a diploma in Electrical and Computer Engineering. I specialize in artificial intelligence, deep learning, and their applications in computer vision, computer graphics, and large language models. I'm also skilled in embedded systems, robotics, and operating systems, with experience across full-stack development, distributed systems, and cloud deployment. I'm currently pursuing an M.Sc. in Communication Networks and Cybersecurity (suspended until Oct. 2025).</p>
+    </section>
+
+    <section id="skills">
+      <h2>Technologies & Skills</h2>
+      <ul class="skills-list">
+        <li>Python</li>
+        <li>Java</li>
+        <li>C/C++</li>
+        <li>Shell</li>
+        <li>JavaScript</li>
+        <li>SQL</li>
+        <li>Matlab/Octave</li>
+        <li>PyTorch</li>
+        <li>OpenCV</li>
+        <li>CUDA</li>
+        <li>TensorFlow</li>
+        <li>Keras</li>
+        <li>Django</li>
+        <li>Flask</li>
+        <li>FastAPI</li>
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>React.js</li>
+        <li>Docker</li>
+        <li>Nginx</li>
+        <li>AWS</li>
+        <li>Google Cloud</li>
+        <li>Git</li>
+        <li>PostgreSQL</li>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+        <li>Arduino</li>
+        <li>Raspberry Pi</li>
+        <li>STM32 Nucleo</li>
+      </ul>
+    </section>
+
+    <section id="cv">
+      <h2>Curriculum Vitae</h2>
+      <div class="cv-container">
+        <div class="cv-card">
+       
+          <embed src="CharisFilis_Resume_ML.pdf" type="application/pdf" width="100%" height="600px" />
+        </div>
+        <!-- <div class="cv-card">
+          <h3>Software Engineering CV</h3>
+          <embed src="CharisFilis_Resume_SE.pdf" type="application/pdf" width="100%" height="600px" />
+        </div>
+      </div> -->
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>HashModNFFBanks</h3>
+          <p>Efficient hashing-based neural filter banks for 3D surface reconstruction with high-frequency encoding using PyTorch and CUDA.</p>
+          <p><strong>Tech:</strong> PyTorch, CUDA, Python, Sphere Tracing</p>
+          <a href="https://github.com/ArtoriasAbyssslayer/HashModNFFBanks-IDR" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Eye Tracking Model Refactor</h3>
+          <p>Refactored eye-tracking and face landmark deep learning models and developed Dockerized deployment pipeline during internship at LOCEYE.</p>
+          <p><strong>Tech:</strong> PyTorch, Docker, Django, MongoDB</p>
+        </div>
+        <div class="project-card">
+          <h3>Various Academic & Personal Repositories</h3>
+          <p>Work in computational intelligence, distributed systems, MIPS, Java/C/C++ programming, and game/graphics projects.</p>
+          <p><strong>Tech:</strong> C, C++, Python, Java, JS, Bash, MIPS Assembly</p>
+          <a href="https://github.com/ArtoriasAbyssslayer?tab=repositories" target="_blank">Browse All</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Charis Filis</p>
+  </footer>
 </body>
+<div class="network">
+  <div class="attractor"></div>
+</div>
+
 </html>
