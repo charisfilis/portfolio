@@ -1,70 +1,88 @@
-/* Reset & base styles */
+:root {
+  --bg-dark: #1e1e2f;
+  --bg-section: #2a2b3c;
+  --bg-skill: #3b4252;
+  --text-main: #e6e9ef;
+  --text-muted: #9ca3af;
+  --primary: #82aaff;
+  --primary-dark: #3d8bff;
+  --accent: #f38ba8;
+  --shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  --radius: 8px;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #2e3440, #3b4252);
+  text-align: center;
+  padding: 5rem 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+.social-links a {
+  margin: 0 1rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  background-color: var(--bg-section);
+  padding: 2rem;
+  border-radius: var(--radius);
+  margin-top: 4rem;
+  box-shadow: var(--shadow);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid var(--primary);
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+/* Profile Photo */
 .profile-photo {
   width: 160px;
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-}
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background: #fdfdfd;
-  color: #222;
-  line-height: 1.7;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-/* Header (Hero) */
-.hero {
-  background: linear-gradient(to right, #1d3557, #457b9d);
-  color: white;
-  text-align: center;
-  padding: 4rem 2rem;
-  border-bottom: 4px solid #e63946;
-}
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-.subtitle {
-  font-size: 1.2rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
-}
-.social-links a {
-  margin: 0 0.75rem;
-  color: #f1faee;
-  text-decoration: none;
-  font-weight: 500;
-}
-.social-links a:hover {
-  text-decoration: underline;
-}
-
-/* Sections */
-section {
-  margin-top: 3.5rem;
-}
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #1d3557;
-  border-bottom: 2px solid #a8dadc;
-  display: inline-block;
-  padding-bottom: 0.2rem;
+  border: 3px solid var(--primary);
 }
 
 /* Skills */
@@ -72,74 +90,139 @@ h2 {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
+  gap: 0.75rem;
 }
+
 .skills-list li {
-  background: #a8dadc;
-  color: #1d3557;
-  padding: 0.5rem 0.9rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  background: var(--bg-skill);
+  color: var(--primary);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
   font-weight: 500;
+  transition: background 0.3s ease;
 }
 
-/* CV Cards */
-.cv-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-.cv-card {
-  flex: 1 1 45%;
-  background: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-.cv-card h3 {
-  margin-bottom: 1rem;
-  color: #457b9d;
+.skills-list li:hover {
+  background: #4c566a;
 }
 
-/* Project Cards */
+/* Projects */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
+
 .project-card {
-  background: white;
-  border-radius: 8px;
-  padding: 1.25rem;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #383b4e;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  background-color: #292c3e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
 }
+
 .project-card h3 {
-  color: #1d3557;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+  color: #fff;
 }
-.project-card a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  color: #e63946;
+
+.project-links a {
+  margin-right: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--primary);
   text-decoration: none;
-  font-weight: 600;
 }
-.project-card a:hover {
+
+.project-links a:hover {
   text-decoration: underline;
+  color: var(--primary-dark);
+}
+
+/* Contact Form */
+.contact-form {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #444c5e;
+  border-radius: 6px;
+  background-color: #1e1e2f;
+  color: var(--text-main);
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 160px;
+  padding: 0.75rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: var(--primary-dark);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #666;
-  background-color: #f1f1f1;
-  margin-top: 4rem;
+  padding: 2rem 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Background Animation Layer */
+.network {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.node {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.node.connected {
+  background-color: var(--accent);
+}
+
+.connection {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform-origin: top left;
+  height: 1px;
+}
+
+.attractor {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
 }
