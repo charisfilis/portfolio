@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+# CV - CHARIS FILIS - USED CLAUDE TO MAKE IT
 cv:
   name: Charis Filis
   headline: Electrical & Computer Engineer | AI/ML Engineer | Full-Stack Developer
